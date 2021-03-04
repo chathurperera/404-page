@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --primary-clr: #333333;
+  --font-family: "Space Mono", monospace;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-family);
+  height: 100vh;
+}
+.not-found {
+  padding: 2%;
+}
+
+
+/* ----- CONTAINER ----- */
+
+.container {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  grid-column-gap: 1em;
+}
+img {
+  width: 100%;
+}
+
+
+
+/* ----- CONTENT SECTION ----- */
+
+.content h1 {
+  font-size: 64px;
+  line-height: 95px;
+}
+.content p {
+  margin: 1rem 0rem;
+  font-size: 24px;
+}
+.btn {
+  padding: 1rem 0rem;
+}
+.btn a {
+  padding: 10px 12px;
+  text-decoration: none;
+  background: var(--primary-clr);
+  color: #fff;
+  font-size: 14px;
+  font-family: var(--font-family);
+}
+.btn a:hover {
+  background: #fff;
+  color: #333333;
+  border: 1px solid #333333;
+  font-weight: 700;
+}
+
+
+
+/* ----- FOOTER SECTION ----- */
+
+.author{
+  position: absolute;
+  bottom: 1%;
+  left: 30%;
+}
+
+
+
+@media only screen and (max-width: 830px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .content {
+    width: 70%;
+  }
+  .content h1 {
+    font-weight: 700;
+    font-size: 48px;
+    letter-spacing: -0.035em;
+    line-height: normal;
+  }
+  .content p {
+    width: 80%;
+    line-height: 27px;
+  }
+  .author{
+    padding-top: 5rem;
+    position: static;
+    text-align: center;
+  }
+}
